@@ -34,7 +34,7 @@ setlocal
 @rem enter this directory
 cd /d %~dp0
 
-set TOOLS_PATH=packages\Grpc.Tools.1.0.1\tools\windows_x64
+set TOOLS_PATH=packages\Grpc.Tools.2.53.0\tools\windows_x64
 
 %TOOLS_PATH%\protoc.exe Greeter\protos\greeter.proto --csharp_out Greeter 
 
@@ -45,3 +45,6 @@ set TOOLS_PATH=packages\Grpc.Tools.1.0.1\tools\windows_x64
 %TOOLS_PATH%\protoc.exe Chat\protos\chat.proto --grpc_out Chat --plugin=protoc-gen-grpc=%TOOLS_PATH%\grpc_csharp_plugin.exe
 
 endlocal
+
+pause
+

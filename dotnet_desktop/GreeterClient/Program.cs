@@ -56,7 +56,9 @@ namespace GreeterClient
             // Send the request
             Console.WriteLine("GreeterClient sending request");
             var response = client.greeting(request);
+            Console.WriteLine("GreeterClient received response: " + response.Greeting);
 
+            response = client.goodbye(request);
             Console.WriteLine("GreeterClient received response: " + response.Greeting);
 
             // Shutdown

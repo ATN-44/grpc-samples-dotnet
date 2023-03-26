@@ -38,5 +38,13 @@ namespace GreeterServer
         {
             return Task.FromResult(new HelloResponse { Greeting = "Hello " + request.Name });
         }
+
+        public override Task<HelloResponse> goodbye(HelloRequest request, ServerCallContext context)
+        {
+            return Task.FromResult(new HelloResponse
+            {
+                Greeting = "Goodbye " + request.Name
+            });
+        }
     }
 }
